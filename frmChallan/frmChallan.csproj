@@ -1,0 +1,367 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0DA9615D-C150-4BC4-AAF6-D6DC36518B07}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>frmChallan</RootNamespace>
+    <AssemblyName>frmChallan</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.WinForms.10.0.40219.1\lib\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="MyLibrary">
+      <HintPath>..\..\..\MyCustomLibrary\CustomLibrary\bin\Debug\MyLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmBackupDatabase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBackupDatabase.Designer.cs">
+      <DependentUpon>frmBackupDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBalance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBalance.Designer.cs">
+      <DependentUpon>frmBalance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBrand.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBrand.Designer.cs">
+      <DependentUpon>frmBrand.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCannibalized.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCannibalized.Designer.cs">
+      <DependentUpon>frmCannibalized.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCannibalizedInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCannibalizedInfo.Designer.cs">
+      <DependentUpon>frmCannibalizedInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCannibalizedProductInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCannibalizedProductInformation.Designer.cs">
+      <DependentUpon>frmCannibalizedProductInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCategory.Designer.cs">
+      <DependentUpon>frmCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmChallanChange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChallanChange.Designer.cs">
+      <DependentUpon>frmChallanChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMainIndex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMainIndex.Designer.cs">
+      <DependentUpon>frmMainIndex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmModel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmModel.Designer.cs">
+      <DependentUpon>frmModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOpenCannibalized.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOpenCannibalized.Designer.cs">
+      <DependentUpon>frmOpenCannibalized.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOpenChallan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOpenChallan.Designer.cs">
+      <DependentUpon>frmOpenChallan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReceiveDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReceiveDetails.Designer.cs">
+      <DependentUpon>frmReceiveDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUpdateDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdateDetails.Designer.cs">
+      <DependentUpon>frmUpdateDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfaceLibrary\IFormRequestor.cs" />
+    <Compile Include="InterfaceLibrary\IReceiveDetailsRequestor.cs" />
+    <Compile Include="InterfaceLibrary\IUpdateChallanRequestor.cs" />
+    <Compile Include="ReceiveChallan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReceiveChallan.Designer.cs">
+      <DependentUpon>ReceiveChallan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBranch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBranch.Designer.cs">
+      <DependentUpon>frmBranch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfaceLibrary\IDataRequestor.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\frmReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmReport.Designer.cs">
+      <DependentUpon>frmReport.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmBackupDatabase.resx">
+      <DependentUpon>frmBackupDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBalance.resx">
+      <DependentUpon>frmBalance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBrand.resx">
+      <DependentUpon>frmBrand.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCannibalized.resx">
+      <DependentUpon>frmCannibalized.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCannibalizedInfo.resx">
+      <DependentUpon>frmCannibalizedInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCannibalizedProductInformation.resx">
+      <DependentUpon>frmCannibalizedProductInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCategory.resx">
+      <DependentUpon>frmCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChallanChange.resx">
+      <DependentUpon>frmChallanChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMainIndex.resx">
+      <DependentUpon>frmMainIndex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmModel.resx">
+      <DependentUpon>frmModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOpenCannibalized.resx">
+      <DependentUpon>frmOpenCannibalized.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOpenChallan.resx">
+      <DependentUpon>frmOpenChallan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReceiveDetails.resx">
+      <DependentUpon>frmReceiveDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdateDetails.resx">
+      <DependentUpon>frmUpdateDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReceiveChallan.resx">
+      <DependentUpon>ReceiveChallan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBranch.resx">
+      <DependentUpon>frmBranch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Report\frmReport.resx">
+      <DependentUpon>frmReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptCannibalized.rdlc" />
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\BussinessLibrary.Product.datasource" />
+    <None Include="Properties\DataSources\BussinessLibrary.SupportLibrary.CannibalizedDetails.datasource" />
+    <None Include="Properties\DataSources\BussinessLibrary.SupportLibrary.ProductBalance.datasource" />
+    <None Include="Properties\DataSources\BussinessLibrary.SupportLibrary.ProductDetails.datasource" />
+    <None Include="Properties\DataSources\BussinessLibrary.tblCannibalized.datasource" />
+    <None Include="Properties\DataSources\BussinessLibrary.tblMaster.datasource" />
+    <None Include="Properties\DataSources\BussinessLibrary.tblMasterDetails.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Desktop\frmRegistrationCode\frmRegistrationCode\frmRegistrationCode.csproj">
+      <Project>{3732b78b-6819-4c35-b3f6-aeddf4999f18}</Project>
+      <Name>frmRegistrationCode</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BussinessLibrary\BussinessLibrary.csproj">
+      <Project>{3a329ea9-4c45-473b-9d48-89e8f74e5832}</Project>
+      <Name>BussinessLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataConnection\DataConnection.csproj">
+      <Project>{af5630dc-72e6-4296-b28f-f76d548f052f}</Project>
+      <Name>DataConnection</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EncriptionLibrabry\EncriptionLibrabry.csproj">
+      <Project>{61a043d0-6b39-4a53-ade6-b38148abfc4d}</Project>
+      <Name>EncriptionLibrabry</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EnumerationLibrary\EnumerationLibrary.csproj">
+      <Project>{26e0be25-5178-4f7a-a089-9a7a9678f571}</Project>
+      <Name>EnumerationLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LicenceExpireLibrary\LicenceExpireLibrary.csproj">
+      <Project>{06cef9c3-6969-4994-9fca-656413c539b9}</Project>
+      <Name>LicenceExpireLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NetworkLibrary\NetworkLibrary.csproj">
+      <Project>{37b6e78c-147c-46d1-8c9c-dae4e92f2c75}</Project>
+      <Name>NetworkLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RegistrationLibrary\RegistrationLibrary.csproj">
+      <Project>{9b85779c-e93b-4747-92d5-6d1a4b1b747c}</Project>
+      <Name>RegistrationLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close Window_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save_32px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save as_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pencil_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit File_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close Window_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\status.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green-plus-md.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Plus_sign.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\can.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Broom_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save as_20px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close Window_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MyLibrary.dll" />
+    <Content Include="MyLibrary.pdb" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
